@@ -1,8 +1,6 @@
 <nav class="navbar has-background-light" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item has-text-weight-bold is-size-5" href="https://bulma.io">
-      <%= Rails.application.class.module_parent_name %>
-    </a>
+    <%= nav_link_to Rails.application.class.module_parent_name, root_path, class: "navbar-item has-text-weight-bold is-size-5" %>
 
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
@@ -13,34 +11,10 @@
 
   <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-end">
-      <%= nav_link_to "Home", root_path, class: "navbar-item" %>
-      <a class="navbar-item">
-        Documentation
-      </a>
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More
-        </a>
-
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-            About
-          </a>
-          <a class="navbar-item">
-            Jobs
-          </a>
-          <a class="navbar-item">
-            Contact
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            Report an issue
-          </a>
-        </div>
-      </div>
       <div class="navbar-item">
         <% if user_signed_in? %>
           <div class="buttons">
+            <%= nav_link_to "Dashboard", pages_dashboard_path, class: "button", active_class: "is-primary", inactive_class: "is-light" %>
             <%= nav_link_to "Edit profile", edit_user_registration_path, class: "button", active_class: "is-primary", inactive_class: "is-light" %>
             <%= button_to t(".sign_out"), destroy_user_session_path, method: :delete, class: "button is-danger is-light" %>
           </div>

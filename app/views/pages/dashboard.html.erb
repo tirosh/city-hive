@@ -1,5 +1,5 @@
 <div class="container has-text-centered">
-  <h1>Find people with similar hobbies in your neighborhood.</h1>
+  <h1>Welcome <%= [current_user.first_name, current_user.last_name].join(' ') %>!</h1>
   <% unless user_signed_in? %>
     <div class="buttons is-centered mt-6">
       <%= link_to "Sign up", new_user_registration_path, class: "button is-primary" %>
