@@ -1,9 +1,13 @@
 <div class="container has-text-centered">
   <h1>Welcome <%= [current_user.first_name, current_user.last_name].join(' ') %>!</h1>
-  <% unless user_signed_in? %>
-    <div class="buttons is-centered mt-6">
-      <%= link_to "Sign up", new_user_registration_path, class: "button is-primary" %>
-      <%= link_to "Login", new_user_session_path, class: "button is-link" %>
+  <% unless current_user.hobbies.blank? %>
+    <div class="box">
+      <h2>Current Hobbies</h2>
+      <ul>
+        <% current_user.hobbies.each do |hobby| %>
+          <li><%= hobby.inspect %></li>
+        <% end %>
+      </ul>
     </div>
   <% end %>
 </div>

@@ -41,6 +41,11 @@
       <%= f.password_field :current_password, autocomplete: "current-password", class: "input" %>
     </div>
 
+    <div class="field">
+      <%= f.label :hobbies, class: "label" %>
+      <%= f.collection_check_boxes :hobby_ids, Hobby.order(:name), :id, :name %>
+    </div>
+
     <div class="field mt-5">
       <%= f.submit "Update", class: "button is-primary is-fullwidth" %>
     </div>
