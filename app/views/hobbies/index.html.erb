@@ -1,0 +1,14 @@
+<div class="w-100">
+  <% if notice.present? %>
+    <div class="alert alert-success" role="alert"><%= notice %></div>
+  <% end %>
+
+  <div class="d-flex justify-content-between align-items-center mb-5">
+    <h1 class="fw-bold">Hobbies</h1>
+    <%= link_to 'New hobby', new_hobby_path, class: "btn btn-primary" %>
+  </div>
+
+  <div id="hobbies" class="d-flex flex-wrap gap-4">
+    <%= render @hobbies %>
+  </div>
+</div>

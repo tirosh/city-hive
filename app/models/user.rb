@@ -25,5 +25,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_person_name
-            
+  has_and_belongs_to_many :hobbies, inverse_of: :user
 end

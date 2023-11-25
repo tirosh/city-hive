@@ -1,0 +1,17 @@
+<div id="<%= dom_id hobby %>" class="bg-white p-6 shadow-sm rounded overflow-hidden">
+<p class="my-5">
+    <strong class="block font-medium mb-1">Name:</strong>
+    <%= hobby.name %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Description:</strong>
+    <%= hobby.description %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this hobby", hobby, class: "btn btn-primary" %>
+    <%= link_to 'Edit this hobby', edit_hobby_path(hobby), class: "btn btn-secondary" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

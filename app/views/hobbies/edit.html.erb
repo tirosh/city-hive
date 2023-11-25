@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="mx-auto col-12 col-sm-9 col-md-6">
+    <h1 class="fw-bold">Editing hobby</h1>
+
+    <%= render "form", hobby: @hobby %>
+    <hr class="my-4">
+    <%= link_to "Show this hobby", @hobby, class: "btn btn-secondary" %>
+    <%= link_to "Back to hobbies", hobbies_path, class: "btn btn-secondary" %>
+  </div>
+</div>

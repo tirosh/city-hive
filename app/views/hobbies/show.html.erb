@@ -1,0 +1,15 @@
+<div class="mx-auto w-100 d-flex">
+  <div class="mx-auto">
+    <% if notice.present? %>
+      <div class="alert alert-success" role="alert"><%= notice %></div>
+    <% end %>
+
+    <%= render @hobby %>
+    <hr class="my-4">
+    <div class="d-flex justify-content-between align-items-center">
+      <%= link_to 'Edit this hobby', edit_hobby_path(@hobby), class: "btn btn-primary mx-1" %>
+      <%= button_to 'Destroy this hobby', hobby_path(@hobby), method: :delete, class: "btn btn-secondary mx-1" %>
+      <%= link_to 'Back to hobbies', hobbies_path, class: "btn btn-danger mx-1" %>
+    </div>
+  </div>
+</div>
