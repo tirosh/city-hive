@@ -12,6 +12,12 @@
 User.destroy_all
 Hobby.destroy_all
 
+# Seed cities
+cities = %w[Berlin]
+5.times do
+  cities << Faker::Address.city
+end
+
 # Seed Users
 25.times do
   User.create!(
@@ -20,7 +26,7 @@ Hobby.destroy_all
     password_confirmation: 'password',
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
-    city: Faker::Address.city
+    city: cities.sample
   )
 end
 
