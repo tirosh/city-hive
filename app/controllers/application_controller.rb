@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
         :last_name,
         :name,
         :email,
+        :city,
         :password,
         hobby_ids: []
       )
@@ -19,7 +20,9 @@ class ApplicationController < ActionController::Base
       u.permit(
         :first_name,
         :last_name,
-        :name, :email,
+        :name,
+        :email,
+        :city,
         :password,
         :password_confirmation,
         :current_password,

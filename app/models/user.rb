@@ -3,6 +3,7 @@
 # Table name: users
 #
 #  id                     :integer          not null, primary key
+#  city                   :string           not null
 #  email                  :string           default(""), not null
 #  encrypted_password     :string           default(""), not null
 #  first_name             :string
@@ -26,4 +27,5 @@ class User < ApplicationRecord
 
   has_person_name
   has_and_belongs_to_many :hobbies, inverse_of: :user
+  validates :city, presence: true
 end
