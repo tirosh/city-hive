@@ -60,6 +60,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem 'factory_bot_rails'
+  gem 'rspec-rails'
 end
 gem "vite_rails"
 gem "vite_ruby"
