@@ -1,13 +1,20 @@
 <div class="container has-text-centered">
-  <h1>Welcome <%= [current_user.first_name, current_user.last_name].join(' ') %>!</h1>
-  <% unless current_user.hobbies.blank? %>
-    <div class="box">
-      <h2>Current Hobbies</h2>
-      <ul>
-        <% current_user.hobbies.each do |hobby| %>
-          <li><%= hobby.inspect %></li>
-        <% end %>
-      </ul>
+  <h1 class="mb-5">Welcome <%= [current_user.first_name, current_user.last_name].join(' ') %>!</h1>
+  <div class="columns">
+    <div class="column">
+      <% unless current_user.hobbies.blank? %>
+        <div class="box">
+          <h2 class="mb-5">Hobbies</h2>
+          <ul>
+            <% current_user.hobbies.each do |hobby| %>
+              <li><%= hobby.name %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
     </div>
-  <% end %>
+    <div class="column">
+      <div id="hobby-partner"></div>
+    </div>
+  </div>
 </div>
