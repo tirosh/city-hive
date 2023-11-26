@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   resources :hobbies
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'users/registrations' }
+  devise_scope :user do
+    get 'users/find_hobby_partners', to: 'users/registrations#find_hobby_partners', as: 'find_hobby_partners'
+  end
   root to: 'pages#home'
   get 'pages/home'
   get 'pages/dashboard'
-  get 'pages/find_hobby_partners', to: 'pages#find_hobby_partners', as: 'find_hobby_partners'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

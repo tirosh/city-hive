@@ -25,7 +25,7 @@ export default {
     findHobbyPartners() {
       this.buttonClicked = true;
 
-      fetch('/pages/find_hobby_partners')
+      fetch('/users/find_hobby_partners')
         .then(response => response.json())
         .then(data => {
           this.matchedUser = data;
