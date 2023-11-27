@@ -211,6 +211,10 @@ GEM
     rake (13.1.0)
     rdoc (6.6.0)
       psych (>= 4.0.0)
+    redis (5.0.8)
+      redis-client (>= 0.17.0)
+    redis-client (0.18.0)
+      connection_pool
     regexp_parser (2.8.2)
     reline (0.4.0)
       io-console (~> 0.5)
@@ -243,6 +247,11 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    sidekiq (7.2.0)
+      concurrent-ruby (< 2)
+      connection_pool (>= 2.3.0)
+      rack (>= 2.2.4)
+      redis-client (>= 0.14.0)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -250,7 +259,7 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    sqlite3 (1.6.8-x86_64-linux)
+    sqlite3 (1.6.9-x86_64-linux)
     stringio (3.0.9)
     thor (1.3.0)
     timeout (0.4.1)
@@ -295,9 +304,12 @@ DEPENDENCIES
   name_of_person
   puma (>= 5.0)
   rails (~> 7.1.2)
+  redis (>= 4.0.1)
+  redis-client (>= 0.17.0)
   rspec-rails
   ruby-vips (~> 2.1, >= 2.1.4)
   selenium-webdriver
+  sidekiq (~> 7.2)
   sprockets-rails
   sqlite3 (~> 1.4)
   tzinfo-data

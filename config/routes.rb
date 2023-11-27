@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'users/registrations' }
   devise_scope :user do
     get 'users/find_hobby_partners', to: 'users/registrations#find_hobby_partners', as: 'find_hobby_partners'
+    get 'users/profile_export', to: 'users/registrations#profile_export', as: 'profile_export'
   end
   root to: 'pages#home'
   get 'pages/home'
