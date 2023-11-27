@@ -12,6 +12,7 @@ class ApplicationController < ActionController::Base
         :email,
         :city,
         :password,
+        :password_confirmation,
         hobby_ids: []
       )
     end
