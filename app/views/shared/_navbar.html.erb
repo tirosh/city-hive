@@ -2,11 +2,13 @@
   <div class="navbar-brand">
     <%= nav_link_to Rails.application.class.module_parent_name, root_path, class: "navbar-item has-text-weight-bold is-size-5" %>
 
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
+    <% if user_signed_in? %>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    <% end %>
   </div>
 
   <div id="navbarBasicExample" class="navbar-menu">
