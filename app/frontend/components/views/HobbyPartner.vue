@@ -1,13 +1,12 @@
 <template>
-  <div class="box">
-    <h2 class="mb-5">Potential hobby partners</h2>
-    <button class="button is-warning mb-5" @click="findHobbyPartners">
+  <div>
+    <button class="button is-warning" @click="findHobbyPartners">
       Find {{ matchedUser ? 'another' : '' }} Hobby Partner
     </button>
-    <div v-if="buttonClicked && matchedUser">
-      <p>{{ [matchedUser.first_name, matchedUser.last_name].join(' ') }}</p>
+    <div v-if="buttonClicked && matchedUser" class="mt-5">
+      <h2>{{ [matchedUser.first_name, matchedUser.last_name].join(' ') }}</h2>
     </div>
-    <div v-if="buttonClicked && !matchedUser">
+    <div v-if="buttonClicked && !matchedUser" class="mt-5">
       <p>No matching hobby partner found.</p>
     </div>
   </div>

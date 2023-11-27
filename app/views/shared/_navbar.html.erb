@@ -18,11 +18,6 @@
             <%= nav_link_to "Edit profile", edit_user_registration_path, class: "button", active_class: "is-primary", inactive_class: "is-light" %>
             <%= button_to t(".sign_out"), destroy_user_session_path, method: :delete, class: "button is-danger is-light" %>
           </div>
-        <% else %>
-          <div class="buttons">
-            <%= nav_link_to "Sign up", new_user_registration_path, class: "button is-primary", inactive_class: "is-light" %>
-            <%= nav_link_to "Login", new_user_session_path, class: "button is-link", inactive_class: "is-light" %>
-          </div>
         <% end %>
       </div>
     </div>

@@ -1,9 +1,13 @@
-<div class="container has-text-centered">
-  <h1>Find people with similar hobbies in your neighborhood.</h1>
-  <% unless user_signed_in? %>
-    <div class="buttons is-centered mt-6">
-      <%= link_to "Sign up", new_user_registration_path, class: "button is-primary" %>
-      <%= link_to "Login", new_user_session_path, class: "button is-link" %>
-    </div>
-  <% end %>
+<div class="container has-text-centered is-fullheight is-flex is-align-items-center is-justify-content-center">
+  <div>
+    <div class="is-size-1">Find people</div>
+    <div class="is-size-1">with similar hobbies</div>
+    <div class="is-size-1">in your neighborhood.</div>
+    <% unless user_signed_in? %>
+      <div class="buttons is-centered mt-5">
+        <%= link_to "Sign up", new_user_registration_path, class: "button is-rounded is-size-4 is-primary" %>
+        <%= link_to "Login", new_user_session_path, class: "button is-link is-size-4" %>
+      </div>
+    <% end %>
+  </div>
 </div>

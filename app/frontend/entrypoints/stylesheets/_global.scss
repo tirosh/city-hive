@@ -37,6 +37,10 @@ p {
   margin-bottom: 10px;
 }
 
+.is-fullheight {
+  height: 100%;
+}
+
 @media screen and (max-width: 767px){
   h1 {
     font-size: 2em;

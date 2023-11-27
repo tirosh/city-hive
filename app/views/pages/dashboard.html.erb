@@ -1,21 +1,23 @@
-<div class="container has-text-centered">
-  <h1 class="mb-5">Welcome <%= [current_user.first_name, current_user.last_name].join(' ') %>!</h1>
-  <div class="columns">
-    <div class="column">
-      <% unless current_user.hobbies.blank? %>
-        <div class="box">
-          <h2 class="mb-5">Hobbies</h2>
-          <ul>
-            <% current_user.hobbies.each do |hobby| %>
-              <li><%= hobby.name %></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
+<div class="container has-text-centered is-fullheight is-flex is-align-items-center is-justify-content-center">
+  <div class="is-flex-grow-1">
+    <h1 class="mb-5">Welcome <%= [current_user.first_name, current_user.last_name].join(' ') %>!</h1>
+    <div class="columns box is-vcentered has-background-white-ter my-5">
+      <div class="column">
+        <% unless current_user.hobbies.blank? %>
+          <div>
+            <h2 class="mb-5">Hobbies</h2>
+            <ul>
+              <% current_user.hobbies.each do |hobby| %>
+                <li><%= hobby.name %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+      </div>
+      <div class="column">
+        <div id="hobby-partner"></div>
+      </div>
     </div>
-    <div class="column">
-      <div id="hobby-partner"></div>
-    </div>
+    <%= link_to "Export Profile to CSV", profile_export_path, class: "button is-primary mt-5" %>
   </div>
-  <%= link_to "Export Profile to CSV", profile_export_path, class: "button is-primary" %>
 </div>
