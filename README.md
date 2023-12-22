@@ -5,15 +5,15 @@
 - install Rails 7
 - create a new Rails project based on this template:
   https://github.com/IsraelDCastro/rails-vite-tailwindcss-template
-  - since I was free to choose which frontend framework I use for the test work, I decided to go with Vue 3 + ViteJS + Bulma
+  - Vue 3 + ViteJS + Bulma as frontend stack
 
 ## Bootstrap
 `rails new cityhive --skip-webpack-install --skip-javascript -d sqlite3 -m https://raw.githubusercontent.com/IsraelDCastro/rails-vite-tailwindcss-template/master/template_bulma.rb --vue`
 
 ## Tasks
-- [ ] Devise integration + authentication
-- [ ] Profile editing form
-- [ ] Service classes
-- [ ] Rspec tests
-- [ ] Bonus: Sidekiq background job
-- [ ] install ruby
+- [x] install ruby
+- [x] Devise integration + authentication
+- [x] Profile editing form
+- [x] Service classes
+- [x] Rspec tests
+- [x] Bonus: Sidekiq background job
